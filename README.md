@@ -12,8 +12,8 @@ expense_8_puzzle.py <start-file> <goal-file> <method> <dump-flag>
 bfs - Breadth First Search
 ucs - Uniform Cost Search
 dfs - Depth First Search
-dls - Depth Limited Search (Note: Depth Limit will be obtained as a Console Input) [Note: This part is EC for CSE 4308 students]
-ids - Iterative Deepening Search [Note: This part is EC for CSE 4308 students]
+dls - Depth Limited Search (Note: Depth Limit will be obtained as a Console Input) 
+ids - Iterative Deepening Search 
 greedy - Greedy Seach
 a* - A* Search (Note: if no <method> is given, this should be the default option)
   
