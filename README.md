@@ -22,8 +22,10 @@ Sample Goal file
 Your output needs to follow the format given in the example here:
 
 For:
+  
 
 expense_8_puzzle.py start.txt goal.txt a* true
+  
 
 The output should appear as follows:
 
@@ -45,4 +47,5 @@ Steps:
         Move 4 Up
         Move 7 Left
         Move 8 Left
+  
 Note: for both greedy and A* search you need to come up with a acceptable heuristic.
