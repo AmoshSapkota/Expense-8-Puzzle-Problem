@@ -1,1 +1,1 @@
-This is an assignment for CSE 5360 (Artificial Intelligence) at UTA for Spring 2023
+This is an assignment 1 for CSE 5360 (Artificial Intelligence I) at UTA for Spring 2023
