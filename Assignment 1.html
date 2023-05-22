@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0086)https://crystal.uta.edu/~gopikrishnav/classes/2023/spring/4308_5360/assmts/assmt1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+
+  
+  <title>Assignment 1</title></head><body style="background-color: rgb(231, 246, 253);" data-new-gr-c-s-check-loaded="14.1110.0" data-gr-ext-installed="">
+<h1>Assignment 1</h1>
+
+<h2>Uninformed &amp;
+Informed Search<br>
+</h2>
+
+<h3><span style="font-weight: bold;">Max possible score:</span></h3>
+
+<ul>
+
+  <li>4308: 100 Points [+40 Points EC]<br>
+  </li>
+  <li>5360: 100 Points</li>
+</ul>
+
+
+<h2>Task 1 (This task will be used as part of the ABET assesment for CSE 4308 students)<br>
+</h2>
+
+<h3><span style="font-weight: bold;">Max: [4308: 100 Points,
+5360: 100 Points]</span></h3>Your
+task is to build an agent to solve a modifed version of the 8 puzzle
+problem (called the Expense 8 puzzle problem). The task is still to
+take a 3X3 grid on which 8 tiles have been placed, where you can only
+move one tile at a time to an adjacent location (as long as it is
+blank) and figure out the order in which to move the tiles to get it to
+a desired configuration. However now the number on the tile now also
+represents the cot of moving that tile (moving the tile marked 6 costs
+6).<br>
+<br>
+Your program should be called expense_8_puzzle and the command line invocation should follow the following format:<br>
+<br>
+<span style="font-style: italic;">expense_8_puzzle.py &lt;start-file&gt; &lt;goal-file&gt; &lt;method&gt; &lt;dump-flag&gt;</span><br>
+<ul>
+  <li>&lt;start-file&gt; and &lt;goal-file&gt; are required.</li>
+  <li>&nbsp;&lt;method&gt; can be</li>
+  <ul>
+    <li>&nbsp;bfs - Breadth First Search</li>
+    <li>ucs - Uniform Cost Search</li>
+    <li>dfs - Depth First Search</li>
+    <li>dls - Depth Limited Search (Note: Depth Limit will be obtained as a Console Input) [Note: This part is EC for CSE 4308 students]<br>
+    </li>
+    <li>ids - Iterative Deepening Search [Note: This part is EC for CSE 4308 students]</li>
+    <li>greedy - Greedy Seach</li>
+    <li>a* - A* Search (Note: if no &lt;method&gt; is given, this should be the default option)</li>
+  </ul>
+  <li>If &lt;dump-flag&gt;&nbsp; is given as true, search trace is
+dumped for analysis in trace-&lt;date&gt;-&lt;time&gt;.txt (Note: if
+&lt;dump-flag&gt; is not given, assume it is false)<br>
+  </li>
+  <ul>
+    <li>search trace contains: fringe and closed set contents per loop
+of search(and per iteration for IDS), counts of nodes expanded and nodes</li>
+  </ul>
+</ul>
+Both start file and goal file need to follow the format as shown here:<br>
+<ul>
+  <li><a href="https://crystal.uta.edu/~gopikrishnav/classes/2023/spring/4308_5360/assmts/assmt1_files/start.txt" target="_blank">Sample Start file</a></li>
+  <li><a href="https://crystal.uta.edu/~gopikrishnav/classes/2023/spring/4308_5360/assmts/assmt1_files/goal.txt" target="_blank">Sample Goal file</a><br>
+  </li>
+</ul>
+Your output needs to follow the format given in the example here:<br>
+<br>
+For:<br>
+<br>
+<span style="font-style: italic;">expense_8_puzzle.py <a href="https://crystal.uta.edu/~gopikrishnav/classes/2023/spring/4308_5360/assmts/assmt1_files/start.txt" target="_blank">start.txt</a> <a href="https://crystal.uta.edu/~gopikrishnav/classes/2023/spring/4308_5360/assmts/assmt1_files/goal.txt">goal.txt</a> a* true</span><br>
+<br>
+The output should appear as follows:<br>
+<br>
+<span style="font-style: italic;">Nodes Popped: 97</span><br style="font-style: italic;">
+<span style="font-style: italic;">Nodes Expanded: 64</span><br style="font-style: italic;">
+<span style="font-style: italic;">Nodes Generated: 173</span><br style="font-style: italic;">
+<span style="font-style: italic;">Max Fringe Size: 77</span><br style="font-style: italic;">
+<span style="font-style: italic;">Solution Found at depth 12 with cost of 63.</span><br style="font-style: italic;">
+<span style="font-style: italic;">Steps:</span><br style="font-style: italic;">
+<span style="font-style: italic;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Move 7 Left</span><br style="font-style: italic;">
+<span style="font-style: italic;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Move 5 Up</span><br style="font-style: italic;">
+<span style="font-style: italic;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Move 8 Right</span><br style="font-style: italic;">
+<span style="font-style: italic;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Move 7 Down</span><br style="font-style: italic;">
+<span style="font-style: italic;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Move 5 Left</span><br style="font-style: italic;">
+<span style="font-style: italic;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Move 6 Down</span><br style="font-style: italic;">
+<span style="font-style: italic;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Move 3 Right</span><br style="font-style: italic;">
+<span style="font-style: italic;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Move 2 Right</span><br style="font-style: italic;">
+<span style="font-style: italic;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Move 1 Up</span><br style="font-style: italic;">
+<span style="font-style: italic;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Move 4 Up</span><br style="font-style: italic;">
+<span style="font-style: italic;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Move 7 Left</span><br style="font-style: italic;">
+<span style="font-style: italic;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Move 8 Left</span><br style="font-style: italic;">
+<br>
+In additon, the seach trace should have all the information contained
+in the file given <a href="https://crystal.uta.edu/~gopikrishnav/classes/2023/spring/4308_5360/assmts/assmt1_files/trace-01_26_2023-11_35_04_AM.txt" target="_blank">here</a>. (The format is not important, the information
+is)<br>
+<br>
+Note: for both greedy and A* search you need to come up with a
+acceptable heuristic (Hint: Consider a modified version of h2 as
+discussed in class)<br>
+<br>
+Note: Implementing DLS and IDS is required for CSE 5360 students but
+optional for CSE 4308 students (and carries upto 40 points EC)<br>
+<hr>
+<h2>How to submit</h2>Implementations in C, C++, Java, and Python will
+be accepted. Points will be taken off
+for failure to comply
+with this requirement unless previously cleared with the Instructor.<br>
+
+<br>
+
+Create a ZIPPED
+directory called &lt;net-id&gt;_assmt1.zip (no other
+forms
+of compression
+accepted, contact the instructor or TA if you do not know how to
+produce .zip files).<br>
+The directory should contain the source code for the task (no need for any compiled binaries). Each
+folder should also contain a file called readme.txt, which
+should specify precisely:<br>
+
+<ul>
+
+  <li>Name and UTA ID of the student.</li>
+  <li>What programming language is used for this task. (Make sure to also give version and subversion numbers)<br>
+  </li>
+  <li>How the code is structured.</li>
+  <li>How to run the code, including very specific compilation
+instructions,
+if compilation is needed. Instructions such as "compile using g++" are
+NOT considered specific if the TA needs to do additional steps to get
+your code to run.</li>
+  <ul>
+    <li>If your code will run on the ACS Omega (not required) make a note of it in the readme file.<br>
+    </li>
+  </ul>
+
+  <li>Insufficient or unclear instructions will be penalized.</li>
+  <li><span style="font-weight: bold;">Code that
+the TA cannot run gets AT MOST 75% credit (depending on if the student is able to get it to run during a Demo session)</span>. </li>
+</ul>
+
+<br>
+
+<br>
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+  div.grammarly-desktop-integration {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+  }
+
+  div.grammarly-desktop-integration:before {
+    content: attr(data-content);
+  }
+</style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
