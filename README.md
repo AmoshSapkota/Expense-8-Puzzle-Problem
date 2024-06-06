@@ -3,7 +3,7 @@
 
 This repository contains the implementation of the modified 8-puzzle problem (Expense 8 puzzle problem) using various search algorithms.
 
-## Assignment Description
+## Description
 
 Your task is to build an agent to solve a modified version of the 8-puzzle problem, where the number on the tile also represents the cost of moving that tile. The goal is to determine the order of moves required to reach a desired configuration.
 
