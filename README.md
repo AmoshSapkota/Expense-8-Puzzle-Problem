@@ -22,9 +22,7 @@ Your task is to build an agent to solve a modified version of the 8-puzzle probl
 
 ## Command Line Invocation
 
-\`\`\`
 expense_8_puzzle.py <start-file> <goal-file> <method> <dump-flag>
-\`\`\`
 
 - `<start-file>`: Path to the start configuration file.
 - `<goal-file>`: Path to the goal configuration file.
@@ -33,30 +31,25 @@ expense_8_puzzle.py <start-file> <goal-file> <method> <dump-flag>
 
 ## Example Usage
 
-\`\`\`
 expense_8_puzzle.py start.txt goal.txt a* true
-\`\`\`
 
 ## Sample Output
 
-\`\`\`plaintext
-Nodes Popped: 97
-Nodes Expanded: 64
-Nodes Generated: 173
-Max Fringe Size: 77
-Solution Found at depth 12 with cost of 63.
-Steps:
-    Move 7 Left
-    Move 5 Up
-    Move 8 Right
-    Move 7 Down
-    Move 5 Left
-    Move 6 Down
-    Move 3 Right
-    Move 2 Right
-    Move 1 Up
-    Move 4 Up
-    Move 7 Left
-    Move 8 Left
-\`\`\`
-
+Nodes Popped: 97  
+Nodes Expanded: 64  
+Nodes Generated: 173  
+Max Fringe Size: 77  
+Solution Found at depth 12 with cost of 63.  
+Steps:  
+    Move 7 Left  
+    Move 5 Up  
+    Move 8 Right  
+    Move 7 Down  
+    Move 5 Left    
+    Move 6 Down  
+    Move 3 Right  
+    Move 2 Right  
+    Move 1 Up  
+    Move 4 Up  
+    Move 7 Left  
+    Move 8 Left  
